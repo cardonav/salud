@@ -1,0 +1,16 @@
+cosfa_salud/
+│
+├── config/
+│   └── db.php
+│
+├── mod/
+│   ├── estudiantes/
+│   ├── historia/
+│
+├── login.php
+├── dashboard.php
+├── logout.php
+├── reportes.php
+├── reporte_pdf.php
+├── fpdf.php
+├── database.sql

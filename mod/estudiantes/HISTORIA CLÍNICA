@@ -1,0 +1,11 @@
+<?php
+include("../../config/db.php");
+
+$r = $conn->query("SELECT * FROM historia");
+
+echo "<h2>Historia Clínica</h2>";
+
+while ($d = $r->fetch_assoc()) {
+    echo $d['sintomas'] . "<br>";
+}
+?>

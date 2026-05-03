@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --accent-color: #f72585;
+    --background-dark: #0f172a;
+    --text-light: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--background-dark) 0%, #1e1b4b 100%);
+    color: var(--text-light);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Glassmorphism utility */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs and Buttons */
+.form-control.glass-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
+    color: var(--text-light);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.form-control.glass-input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(67, 97, 238, 0.25);
+    color: var(--text-light);
+}
+
+.form-control.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary-custom {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Navbar */
+.navbar-custom {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--card-border);
+}
+
+.navbar-custom .navbar-brand, .navbar-custom .nav-link {
+    color: var(--text-light) !important;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Tables */
+.table-custom {
+    color: var(--text-light);
+}
+
+.table-custom th {
+    border-bottom-color: var(--card-border);
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+}
+
+.table-custom td {
+    border-bottom-color: rgba(255,255,255,0.05);
+    vertical-align: middle;
+}
+
+.table-custom tbody tr:hover {
+    background-color: rgba(255,255,255,0.02);
+}
+
+/* Action buttons */
+.btn-action {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0.2rem;
+}
+
+/* Dashboard Cards */
+.dash-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #4361ee, #4cc9f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
